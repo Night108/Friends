@@ -143,7 +143,7 @@ drawCrackers();
 
 // Automatic cracker bursts at random intervals
 function scheduleNextBurst() {
-  const delay = Math.random() * 3000 + 2000; // 2-5 seconds
+  const delay = Math.random() * 1000 + 500; // 0.5-1.5 seconds between bursts
   setTimeout(() => {
     createCrackerBurst();
     scheduleNextBurst();
