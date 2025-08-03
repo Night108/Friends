@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to top right, #ffecd2 0%, #fcb69f 100%);
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+}
+
+#sparkleCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 50px 20px;
+  color: #333;
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #ff6f61;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+.message {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+button {
+  background-color: #ff6f61;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #e34d4d;
+}
+
+#quoteDisplay {
+  margin-top: 30px;
+  font-size: 1.1em;
+  color: #555;
+  animation: fadeIn 1s ease-in-out;
+  padding: 0 10px;
+  word-wrap: break-word;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .message, #quoteDisplay {
+    font-size: 1em;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.95em;
+  }
+
+  .container {
+    padding: 30px 15px;
+  }
+}
